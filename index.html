@@ -12,7 +12,7 @@
       }
       
       span {
-        color: rgb(210,210,210);
+        color: rgb(190,190,190);
       }
       
     </style>
@@ -55,7 +55,7 @@
         
         ctx.save();
         
-        ctx.transform( gx(robot_x) , gy(robot_y) );
+        ctx.translate( gx(robot_x) , gy(robot_y) );
         ctx.rotate( robot_dir );
         
         ctx.drawImage( img , gz(-robot_width/2) , gz(-robot_height/2) , robot_width , robot_height );
