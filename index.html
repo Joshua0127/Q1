@@ -60,9 +60,9 @@
         ctx.translate( gx(robot_x) , gy(robot_y) );
         ctx.rotate( robot_dir );
         
-        ctx.shadowOffsetX = 0;
-        ctx.shadowOffsetY = 0;
-        ctx.shadowColor = 'black';
+        ctx.shadowOffsetX = -10;
+        ctx.shadowOffsetY = -10;
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
         ctx.shadowBlur = 30;
         
         ctx.drawImage( img , gz(-robot_width/2) , gz(-robot_height/2) , gz(robot_width) , gz(robot_height) );
