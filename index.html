@@ -103,15 +103,15 @@
         // position update
         
         if (target) {
-          robot_x += (targetx-robot_x)/20;
-          robot_y += (targety-robot_y)/20;
-          robot_dir += angdis(robot_dir,targetdir)/20;
+          robot_x += (targetx-robot_x)/10;
+          robot_y += (targety-robot_y)/10;
+          robot_dir += angdis(robot_dir,targetdir)/10;
         }
         
         // test for if target reach
         
         if (target) {
-          if (Math.sqrt((robot_x-targetx)*(robot_x-targetx) + (robot_y-targety)*(robot_y-targety)) < 1 && angdis(robot_dir,targetdir) < radian/180) {
+          if (Math.sqrt((robot_x-targetx)*(robot_x-targetx) + (robot_y-targety)*(robot_y-targety)) < 1 && Math.abs(angdis(robot_dir,targetdir)) < radian/180) {
             robot_x = targetx;
             robot_y = targety;
             robot_dir = targetdir;
