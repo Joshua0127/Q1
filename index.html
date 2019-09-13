@@ -12,7 +12,10 @@
   </head>
   <body>
     <center>
+      <br>
       <canvas id="myCanvas"></canvas>
+      <br>
+      <span><em>Use arrow keys to navigate</em></span>
     </center>
     <script>
       var c = document.getElementById("myCanvas");
@@ -29,9 +32,9 @@
           for (var x_ = 0; x_ < 6; x_++) {
             // Get grid colour
             if (Math.abs((x_ - ( y_ % 2 )) % 2) == 0) {
-              ctx.fillStyle = "rgb(150,150,150)";
+              ctx.fillStyle = "rgb(210,210,210)";
             } else {
-              ctx.fillStyle = "rgb(225,225,225)";
+              ctx.fillStyle = "rgb(235,235,235)";
             }
             // Draw square
             ctx.fillRect( gx( ((x_/5)*200) - 100 ), gy( ((y_/5)*200) - 100 ) , c.width/5 , c.height/5 );
