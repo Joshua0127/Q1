@@ -74,27 +74,27 @@
       
       function controls() {
         if (keys[39] && !target) { // Right Key
-          targetdir = robot_dir + 90;
+          targetdir = robot_dir + Math.PI/2;
           targetx = robot_x;
           targety = robot_y;
           target = true;
         }
         if (keys[37] && !target) { // Left Key
-          targetdir = robot_dir - 90;
+          targetdir = robot_dir - Math.PI/2;
           targetx = robot_x;
           targety = robot_y;
           target = true;
         }
         if (keys[38] && !target) { // Forward
           targetdir = robot_dir;
-          targetx = robot_x + (c.width/5) * Math.sin((robot_dir/180) * Math.PI);
-          targety = robot_y + (c.width/5) * Math.cos((robot_dir/180) * Math.PI);
+          targetx = robot_x + (200/5) * Math.sin(robot_dir);
+          targety = robot_y + (200/5) * Math.cos(robot_dir);
           target = true;
         }
         if (keys[40] && !target) { // Backward
           targetdir = robot_dir;
-          targetx = robot_x - (c.width/5) * Math.sin((robot_dir/180) * Math.PI);
-          targety = robot_y - (c.width/5) * Math.cos((robot_dir/180) * Math.PI);
+          targetx = robot_x - (200/5) * Math.sin(robot_dir);
+          targety = robot_y - (200/5) * Math.cos(robot_dir);
           target = true;
         }
         
