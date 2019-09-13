@@ -50,6 +50,8 @@
       var robot_width = 200/5.1;
       var robot_height = 200/7.1;
       
+      const radian = 2*Math.PI;
+      
       // Keys detector
       var keys = {};
       window.onkeyup = function(e) { keys[e.keyCode] = false; }
@@ -60,13 +62,13 @@
       function gz(z) { return (z/100)*(c.width/2) } // Non-bias
       
       function angdis(a,b) { // Distance between 2 angles
-        if (a < 0) {a = 360+(a%360)}
-        if (b < 0) {b = 360+(b%360)}
-        a = a%360; b = b%360;
+        if (a < 0) {a = radian+(a%radian)}
+        if (b < 0) {b = radian+(b%radian)}
+        a = a%radian; b = b%radian;
         
         var dis = b-a;
-        if (Math.abs(dis) > 180) {
-          dis = ((b+180)%360)-((a+180)%360);
+        if (Math.abs(dis) > radian/2) {
+          dis = ((b+radian/2)%radian)-((a+radian/2)%radian);
         }
 
         return dis;
