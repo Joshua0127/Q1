@@ -51,6 +51,8 @@
       
       function robot() {
         
+        // Draw Robot Sprite
+        
         var img = document.getElementById("Robot");
         
         ctx.save();
@@ -60,6 +62,7 @@
         
         ctx.drawImage( img , gz(-robot_width/2) , gz(-robot_height/2) , robot_width , robot_height );
         
+        ctx.restore();
       }
       
       function grid() {
