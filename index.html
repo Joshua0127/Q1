@@ -100,6 +100,13 @@
           target = true;
         }
         
+        // Test if target out of bounds if so, correct
+        
+        if (targetx > 180) {targetx = 180; target=false;}
+        if (targetx < -180) {targetx = -180; target=false;}
+        if (targety > 180) {targety = 180; target=false;}
+        if (targety < -180) {targety = -180; target=false;}
+        
         // position update
         
         if (target) {
