@@ -60,7 +60,7 @@
         ctx.translate( gx(robot_x) , gy(robot_y) );
         ctx.rotate( robot_dir );
         
-        ctx.drawImage( img , gz(-robot_width/2) , gz(-robot_height/2) , robot_width , robot_height );
+        ctx.drawImage( img , gz(-robot_width/2) , gz(-robot_height/2) , gz(robot_width) , gz(robot_height) );
         
         ctx.restore();
       }
