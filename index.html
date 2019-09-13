@@ -25,10 +25,10 @@
         for (var y_ = 0; y_ < 6; y_++) {
           for (var x_ = 0; x_ < 6; x_++) {
             // Get grid colour
-            if ((x_ - ( y_ % 2 )) % 2 == 0) {
+            if (Math.abs((x_ - ( y_ % 2 )) % 2) == 0) {
               ctx.fillStyle = "rgb(0,0,0)";
             } else {
-              ctx.fillStyle = "rgb(255,255,255)";
+              ctx.fillStyle = "rgb(255,255,55)";
             }
             ctx.fillRect( gx( (x_/5)*200 - 100 ), gy( (y_/5)*200 - 100 ) , c.width/5 , c.height/5 );
           }
